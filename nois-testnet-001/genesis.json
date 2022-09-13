@@ -1,6 +1,6 @@
 {
-  "genesis_time": "2022-08-16T09:11:36.628197331Z",
-  "chain_id": "nois-testnet-000",
+  "genesis_time": "2022-09-13T17:56:07.265510254Z",
+  "chain_id": "nois-testnet-001",
   "initial_height": "1",
   "consensus_params": {
     "block": {
@@ -33,14 +33,14 @@
       "accounts": [
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "nois1sj65d5zlj7tjg3wv3pfufr6txzzpwym5tdca8l",
+          "address": "nois1eje8edkd6tg3fsuwvvq8y8hep6rk8q8aaxu0jh",
           "pub_key": null,
           "account_number": "0",
           "sequence": "0"
         },
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "nois1snwdc0jahgu8zk9x6zarcppwkv8pnmd2p5g0es",
+          "address": "nois1udt9yvgucgtk9m2fzu2hkl0yt8tqlgmy59c07q",
           "pub_key": null,
           "account_number": "0",
           "sequence": "0"
@@ -57,27 +57,19 @@
       },
       "balances": [
         {
-          "address": "nois1sj65d5zlj7tjg3wv3pfufr6txzzpwym5tdca8l",
+          "address": "nois1eje8edkd6tg3fsuwvvq8y8hep6rk8q8aaxu0jh",
           "coins": [
             {
               "denom": "unois",
-              "amount": "1000000000000000"
-            },
-            {
-              "denom": "ustake",
               "amount": "1000000000000000"
             }
           ]
         },
         {
-          "address": "nois1snwdc0jahgu8zk9x6zarcppwkv8pnmd2p5g0es",
+          "address": "nois1udt9yvgucgtk9m2fzu2hkl0yt8tqlgmy59c07q",
           "coins": [
             {
               "denom": "unois",
-              "amount": "1000000000000000"
-            },
-            {
-              "denom": "ustake",
               "amount": "1000000000000000"
             }
           ]
@@ -86,10 +78,6 @@
       "supply": [
         {
           "denom": "unois",
-          "amount": "2000000000000000"
-        },
-        {
-          "denom": "ustake",
           "amount": "2000000000000000"
         }
       ],
@@ -101,7 +89,7 @@
     },
     "crisis": {
       "constant_fee": {
-        "denom": "ustake",
+        "denom": "unois",
         "amount": "1000"
       }
     },
@@ -150,19 +138,19 @@
                   "max_change_rate": "0.010000000000000000"
                 },
                 "min_self_delegation": "1",
-                "delegator_address": "nois1sj65d5zlj7tjg3wv3pfufr6txzzpwym5tdca8l",
-                "validator_address": "noisvaloper1sj65d5zlj7tjg3wv3pfufr6txzzpwym52d2u7t",
+                "delegator_address": "nois1eje8edkd6tg3fsuwvvq8y8hep6rk8q8aaxu0jh",
+                "validator_address": "noisvaloper1eje8edkd6tg3fsuwvvq8y8hep6rk8q8auxwwtr",
                 "pubkey": {
                   "@type": "/cosmos.crypto.ed25519.PubKey",
-                  "key": "N9UDtiG37gKCnTGdlgg8EpPHHEINwuEnc39eky1zlls="
+                  "key": "bVGIloQ9MFrSnlTLeLxSGl9rTRgAEfaksBTAQX4bL9A="
                 },
                 "value": {
-                  "denom": "ustake",
+                  "denom": "unois",
                   "amount": "1000000000"
                 }
               }
             ],
-            "memo": "eb4deffb55f246849050c546b49d03d9dfb3949f@10.233.92.172:26656",
+            "memo": "4dbebd3f121b3217ee170bb8f39233368d1155b8@10.233.92.112:26656",
             "timeout_height": "0",
             "extension_options": [],
             "non_critical_extension_options": []
@@ -172,7 +160,7 @@
               {
                 "public_key": {
                   "@type": "/cosmos.crypto.secp256k1.PubKey",
-                  "key": "Am7bYm7leQ2IrdDESU04Bq/l646jvetJUADOi/ySI4xK"
+                  "key": "A6Tdzu+53SgTjaZKX4rWGg78dpm3+6i2LLfEFmn1kCmB"
                 },
                 "mode_info": {
                   "single": {
@@ -190,7 +178,7 @@
             }
           },
           "signatures": [
-            "lLFzghts182ZygiCSzXECPESKKRdW5+w/4TQqBDYmTAzSNehcc5L59FrtEDqiUqLM1xMA1rp8BvQRZa6rFYQOg=="
+            "0YFH10F7WWoufYfmyxdfYiYu82aGU1PkmQ/9uzurvk1dIq6xHr/noFZcaFC/54fMjuUv+TbQleHYkAR+xWOs3Q=="
           ]
         }
       ]
@@ -203,7 +191,7 @@
       "deposit_params": {
         "min_deposit": [
           {
-            "denom": "ustake",
+            "denom": "unois",
             "amount": "10000000"
           }
         ],
@@ -277,7 +265,7 @@
         "annual_provisions": "0.000000000000000000"
       },
       "params": {
-        "mint_denom": "ustake",
+        "mint_denom": "unois",
         "inflation_rate_change": "0.130000000000000000",
         "inflation_max": "0.200000000000000000",
         "inflation_min": "0.070000000000000000",
@@ -303,7 +291,7 @@
         "max_validators": 100,
         "max_entries": 7,
         "historical_entries": 10000,
-        "bond_denom": "ustake"
+        "bond_denom": "unois"
       },
       "last_total_power": "0",
       "last_validator_powers": [],
