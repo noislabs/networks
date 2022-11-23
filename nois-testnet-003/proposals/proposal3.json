@@ -1,0 +1,13 @@
+{ 
+    "title": "Nois Param Change",
+    "description": "Decrease the block space from 4 million to 3.5 million.",
+    "changes": 
+        [
+             {
+                "subspace": "baseapp",
+                "key": "BlockParams",
+                "value": {"max_bytes":"22020096","max_gas":"3500000"}
+             }
+        ],
+    "deposit": "10000000unois" 
+}

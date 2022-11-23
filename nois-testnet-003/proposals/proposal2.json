@@ -1,0 +1,27 @@
+{ 
+    "title": "Nois Param Change",
+    "description": "Increase the max validator set from 40 to 45. Make the slashing a bit more flexible. Decrease the block space.",
+    "changes": 
+        [
+             { "subspace": "staking",
+              "key": "MaxValidators",
+              "value": 45 
+             },
+             {
+                "subspace": "slashing",
+                "key": "SlashFractionDowntime",
+                "value": "0.005000000000000000"
+             },
+             {
+                "subspace": "slashing",
+                "key": "SignedBlocksWindow",
+                "value": "10000"
+             },
+             {
+                "subspace": "BlockParams",
+                "key": "MaxGas",
+                "value": "3500000"
+             }
+        ],
+    "deposit": "10000000unois" 
+}
