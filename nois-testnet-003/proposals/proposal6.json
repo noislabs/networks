@@ -1,0 +1,13 @@
+{ 
+    "title": "Nois Param Change - max gas per block",
+    "description": "Increase the block space from 3.5 million to 5 million.\nThis is needed not for the day to day contract execution but to have enough block space to initially store and compile the drand contract that got a bit bigger.\nIn the next network, mainnet or testnet we might decrease the block space again and solve the issue differently by reducing compile cost. ",
+    "changes": 
+        [
+             {
+                "subspace": "baseapp",
+                "key": "BlockParams",
+                "value": {"max_bytes":"22020096","max_gas":"5000000"}
+             }
+        ],
+    "deposit": "10000000unois" 
+}

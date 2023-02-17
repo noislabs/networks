@@ -1,0 +1,12 @@
+{ 
+    "title": "Increase unbonding time from 1 day to 21days",
+    "description": "The unbonding time is currently 1 day. The IBC clients need to be updated in a shorter period than the unbonding time in order to be trusted. This is why we'd need to increase the unbonding time. This way IBC clients don't get expired",
+    "changes": 
+        [
+             { "subspace": "staking",
+              "key": "UnbondingTime",
+              "value": "1814400" 
+             }
+        ],
+    "deposit": "10000000unois" 
+}
