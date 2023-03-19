@@ -1,6 +1,6 @@
 {
-  "genesis_time": "2023-03-19T17:17:39.171468Z",
-  "chain_id": "nois-testnet-004",
+  "genesis_time": "2023-03-19T21:23:36.437285Z",
+  "chain_id": "nois-1",
   "initial_height": "1",
   "consensus_params": {
     "block": {
@@ -1159,9 +1159,9 @@
             ],
             "delegated_free": [],
             "delegated_vesting": [],
-            "end_time": "1900171059"
+            "end_time": "1900185816"
           },
-          "start_time": "1679246259"
+          "start_time": "1679261016"
         },
         {
           "@type": "/cosmos.vesting.v1beta1.ContinuousVestingAccount",
@@ -1180,9 +1180,9 @@
             ],
             "delegated_free": [],
             "delegated_vesting": [],
-            "end_time": "1900171059"
+            "end_time": "1900185816"
           },
-          "start_time": "1679246259"
+          "start_time": "1679261016"
         },
         {
           "@type": "/cosmos.vesting.v1beta1.ContinuousVestingAccount",
@@ -1201,9 +1201,9 @@
             ],
             "delegated_free": [],
             "delegated_vesting": [],
-            "end_time": "1837099059"
+            "end_time": "1837113816"
           },
-          "start_time": "1679246259"
+          "start_time": "1679261016"
         },
         {
           "@type": "/cosmos.vesting.v1beta1.ContinuousVestingAccount",
@@ -1222,9 +1222,9 @@
             ],
             "delegated_free": [],
             "delegated_vesting": [],
-            "end_time": "1837099059"
+            "end_time": "1837113816"
           },
-          "start_time": "1679246259"
+          "start_time": "1679261016"
         },
         {
           "@type": "/cosmos.vesting.v1beta1.ContinuousVestingAccount",
@@ -1243,9 +1243,9 @@
             ],
             "delegated_free": [],
             "delegated_vesting": [],
-            "end_time": "1773940659"
+            "end_time": "1773955416"
           },
-          "start_time": "1679246259"
+          "start_time": "1679261016"
         },
         {
           "@type": "/cosmos.vesting.v1beta1.ContinuousVestingAccount",
@@ -1264,9 +1264,9 @@
             ],
             "delegated_free": [],
             "delegated_vesting": [],
-            "end_time": "1773940659"
+            "end_time": "1773955416"
           },
-          "start_time": "1679246259"
+          "start_time": "1679261016"
         },
         {
           "@type": "/cosmos.vesting.v1beta1.ContinuousVestingAccount",
@@ -1285,9 +1285,9 @@
             ],
             "delegated_free": [],
             "delegated_vesting": [],
-            "end_time": "1773940659"
+            "end_time": "1773955416"
           },
-          "start_time": "1679246259"
+          "start_time": "1679261016"
         },
         {
           "@type": "/cosmos.vesting.v1beta1.ContinuousVestingAccount",
@@ -1306,9 +1306,9 @@
             ],
             "delegated_free": [],
             "delegated_vesting": [],
-            "end_time": "1773940659"
+            "end_time": "1773955416"
           },
-          "start_time": "1679246259"
+          "start_time": "1679261016"
         },
         {
           "@type": "/cosmos.vesting.v1beta1.ContinuousVestingAccount",
@@ -1327,9 +1327,9 @@
             ],
             "delegated_free": [],
             "delegated_vesting": [],
-            "end_time": "1773940659"
+            "end_time": "1773955416"
           },
-          "start_time": "1679246259"
+          "start_time": "1679261016"
         },
         {
           "@type": "/cosmos.vesting.v1beta1.ContinuousVestingAccount",
@@ -1348,9 +1348,9 @@
             ],
             "delegated_free": [],
             "delegated_vesting": [],
-            "end_time": "1773940659"
+            "end_time": "1773955416"
           },
-          "start_time": "1679246259"
+          "start_time": "1679261016"
         },
         {
           "@type": "/cosmos.vesting.v1beta1.ContinuousVestingAccount",
@@ -1369,9 +1369,9 @@
             ],
             "delegated_free": [],
             "delegated_vesting": [],
-            "end_time": "1773940659"
+            "end_time": "1773955416"
           },
-          "start_time": "1679246259"
+          "start_time": "1679261016"
         }
       ]
     },
