@@ -188,6 +188,6 @@ noisd add-genesis-account nois1ua2qf3vfu5v4f547ndvze0jptm3zxl8rwtll0k  "$account
 noisd add-genesis-account nois1kaq7tw7y8lsr7etjglfc4n5yc68fzyvlxpcf6w  "$account_balance"nois --vesting-amount $((account_balance - free_amount))nois --vesting-start-time $current_timestamp --vesting-end-time $in_3_years_timestamp  
 noisd add-genesis-account nois1qt9xm0yml93ltf8rg0q7pylgzgkyxrtuj6nvzs  "$account_balance"nois --vesting-amount $((account_balance - free_amount))nois --vesting-start-time $current_timestamp --vesting-end-time $in_3_years_timestamp 
 
-account_balance=220000 #0.1% 
+account_balance=220000 #0.11% 
 noisd add-genesis-account nois17dn5e2n6w60pzyxeq79apr05r6jzfw7ws8e9lr  "$account_balance"nois --vesting-amount $((account_balance - free_amount))nois --vesting-start-time $current_timestamp --vesting-end-time $in_3_years_timestamp  
 noisd add-genesis-account nois140l6y2gp3gxvay6qtn70re7z2s0gn57za3ww2e  "$account_balance"nois --vesting-amount $((account_balance - free_amount))nois --vesting-start-time $current_timestamp --vesting-end-time $in_3_years_timestamp 
