@@ -161,6 +161,9 @@ validator_addresses=(
     "nois1chlldrmwmm9v9aw7azy5ug3plale47hm00f6d9" 
     "nois1sqtzwhetv5az4e9vvmpvuew479ar70l3rqu94q" 
     "nois1g6rfmu0gcc3avke35c9wemu8f0kxdrvnz4wgqt" 
+    "nois1nevy9pek8fjn7c3fja5pfjakwudx4v5f86a782"
+    "nois1g40rlulkjngw8fpe6f079vw80ykgskt0j4udcr"
+    "nois1zt338fp758c6hlnma54a7vc076ltz48l72t7fp"
 )
 
 # Early validators
