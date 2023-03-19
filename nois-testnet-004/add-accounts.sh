@@ -5,6 +5,7 @@ in_3_years_timestamp=$(date -v+3y "+%s") # $(date -d '+3 years' +%s)
 in_5_years_timestamp=$(date -v+5y "+%s") # $(date -d '+5 years' +%s)
 in_7_years_timestamp=$(date -v+7y "+%s") # $(date -d '+7 years' +%s)
 free_amount=20000
+ufree_amount=$(expr $free_amount \* 1000000)
 
 validator_addresses=(
     "nois17quau8ah8zdadkyflz0h6ead27n2yjj90v49lf"
@@ -167,30 +168,35 @@ validator_addresses=(
 )
 
 # Early validators
+account_balance=20000 #0.01%
+uaccount_balance=$(expr $account_balance \* 1000000)
 for validator_address in "${validator_addresses[@]}"
 do
-    noisd add-genesis-account "$validator_address" $account_balance
+    noisd add-genesis-account "$validator_address" "$uaccount_balance"unois
 done
 
 # 7 year vesting
 account_balance=10000000 #5%
-noisd add-genesis-account nois10cnf56nhfzsddg0qmvc7p3kfrt9l43f6hheqc8 "$account_balance"nois --vesting-amount $((account_balance - free_amount))nois --vesting-start-time $current_timestamp --vesting-end-time $in_7_years_timestamp
-noisd add-genesis-account nois1wrcs6v5d4772ajwaf5c5kp275e9h82vcvpnzfa "$account_balance"nois --vesting-amount $((account_balance - free_amount))nois --vesting-start-time $current_timestamp --vesting-end-time $in_7_years_timestamp
+uaccount_balance=$(expr $account_balance \* 1000000)
+noisd add-genesis-account nois10cnf56nhfzsddg0qmvc7p3kfrt9l43f6hheqc8 "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_7_years_timestamp
+noisd add-genesis-account nois1wrcs6v5d4772ajwaf5c5kp275e9h82vcvpnzfa "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_7_years_timestamp
 
 # 5 year vesting
 account_balance=3000000 #1.5%
-noisd add-genesis-account nois128tdu0w2ga9wh9nyy9j5dmz5q7ed4qk8zaqcmv "$account_balance"nois --vesting-amount $((account_balance - free_amount))nois --vesting-start-time $current_timestamp --vesting-end-time $in_5_years_timestamp 
-noisd add-genesis-account nois1hw4ctf2tm8j9avy3vjchxcpew4mhhj8m5zt9xn  "$account_balance"nois --vesting-amount $((account_balance - free_amount))nois --vesting-start-time $current_timestamp --vesting-end-time $in_5_years_timestamp 
+uaccount_balance=$(expr $account_balance \* 1000000)
+noisd add-genesis-account nois128tdu0w2ga9wh9nyy9j5dmz5q7ed4qk8zaqcmv "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_5_years_timestamp 
+noisd add-genesis-account nois1hw4ctf2tm8j9avy3vjchxcpew4mhhj8m5zt9xn "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_5_years_timestamp 
 
 # 3 year vesting
 account_balance=200000 #0.1% 
-
-noisd add-genesis-account nois1av86gm7rnsgq6vsvf09z4nkae235cvg0fe554j  "$account_balance"nois --vesting-amount $((account_balance - free_amount))nois --vesting-start-time $current_timestamp --vesting-end-time $in_3_years_timestamp 
-noisd add-genesis-account nois16e7gnczk2jv20gdzqmfxgrxuwdty6g36t42mv2  "$account_balance"nois --vesting-amount $((account_balance - free_amount))nois --vesting-start-time $current_timestamp --vesting-end-time $in_3_years_timestamp 
-noisd add-genesis-account nois1ua2qf3vfu5v4f547ndvze0jptm3zxl8rwtll0k  "$account_balance"nois --vesting-amount $((account_balance - free_amount))nois --vesting-start-time $current_timestamp --vesting-end-time $in_3_years_timestamp 
-noisd add-genesis-account nois1kaq7tw7y8lsr7etjglfc4n5yc68fzyvlxpcf6w  "$account_balance"nois --vesting-amount $((account_balance - free_amount))nois --vesting-start-time $current_timestamp --vesting-end-time $in_3_years_timestamp  
-noisd add-genesis-account nois1qt9xm0yml93ltf8rg0q7pylgzgkyxrtuj6nvzs  "$account_balance"nois --vesting-amount $((account_balance - free_amount))nois --vesting-start-time $current_timestamp --vesting-end-time $in_3_years_timestamp 
+uaccount_balance=$(expr $account_balance \* 1000000)
+noisd add-genesis-account nois1av86gm7rnsgq6vsvf09z4nkae235cvg0fe554j "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_3_years_timestamp 
+noisd add-genesis-account nois16e7gnczk2jv20gdzqmfxgrxuwdty6g36t42mv2 "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_3_years_timestamp 
+noisd add-genesis-account nois1ua2qf3vfu5v4f547ndvze0jptm3zxl8rwtll0k "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_3_years_timestamp 
+noisd add-genesis-account nois1kaq7tw7y8lsr7etjglfc4n5yc68fzyvlxpcf6w "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_3_years_timestamp  
+noisd add-genesis-account nois1qt9xm0yml93ltf8rg0q7pylgzgkyxrtuj6nvzs "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_3_years_timestamp 
 
 account_balance=220000 #0.11% 
-noisd add-genesis-account nois17dn5e2n6w60pzyxeq79apr05r6jzfw7ws8e9lr  "$account_balance"nois --vesting-amount $((account_balance - free_amount))nois --vesting-start-time $current_timestamp --vesting-end-time $in_3_years_timestamp  
-noisd add-genesis-account nois140l6y2gp3gxvay6qtn70re7z2s0gn57za3ww2e  "$account_balance"nois --vesting-amount $((account_balance - free_amount))nois --vesting-start-time $current_timestamp --vesting-end-time $in_3_years_timestamp 
+uaccount_balance=$(expr $account_balance \* 1000000)
+noisd add-genesis-account nois17dn5e2n6w60pzyxeq79apr05r6jzfw7ws8e9lr  "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_3_years_timestamp  
+noisd add-genesis-account nois140l6y2gp3gxvay6qtn70re7z2s0gn57za3ww2e  "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_3_years_timestamp 
