@@ -164,15 +164,12 @@ validator_addresses=(
 )
 
 # Early validators
-vesting_amount=19000nois
-account_balance=20000nois
 for validator_address in "${validator_addresses[@]}"
 do
     noisd add-genesis-account "$validator_address" $account_balance
 done
 
 # 7 year vesting
-
 account_balance=10000000 #5%
 noisd add-genesis-account nois10cnf56nhfzsddg0qmvc7p3kfrt9l43f6hheqc8 "$account_balance"nois --vesting-amount $((account_balance - free_amount))nois --vesting-start-time $current_timestamp --vesting-end-time $in_7_years_timestamp
 noisd add-genesis-account nois1wrcs6v5d4772ajwaf5c5kp275e9h82vcvpnzfa "$account_balance"nois --vesting-amount $((account_balance - free_amount))nois --vesting-start-time $current_timestamp --vesting-end-time $in_7_years_timestamp
