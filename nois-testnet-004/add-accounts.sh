@@ -247,4 +247,4 @@ noisd add-genesis-account nois140l6y2gp3gxvay6qtn70re7z2s0gn57za3ww2e  "$uaccoun
 # nois-testnet-004
 # rm ~/.noisd/config/genesis.json ; noisd init katarina --chain-id nois-testnet-004 && noisd prepare-genesis nois-testnet-004 && nois-testnet-004/add-accounts.sh && cp ~/.noisd/config/genesis.json nois-testnet-004/genesis.json && UPDATED=$(jq '.genesis_time = "2023-03-21T15:00:00Z"' nois-testnet-004/genesis.json) && echo "$UPDATED" > nois-testnet-004/genesis.json
 # nois-1
-# rm ~/.noisd/config/genesis.json ; noisd init katarina --chain-id nois-1 && noisd prepare-genesis nois-1 && nois-testnet-004/add-accounts.sh && cp ~/.noisd/config/genesis.json nois-1/genesis.json && UPDATED=$(jq '.genesis_time = "2023-03-21T15:00:00Z"' nois-1/genesis.json) && echo "$UPDATED" > nois-1/genesis.json
+# rm ~/.noisd/config/genesis.json ; noisd init katarina --chain-id nois-1 && noisd prepare-genesis nois-1 && nois-testnet-004/add-accounts.sh && cp ~/.noisd/config/genesis.json nois-1/genesis.json && UPDATED=$(jq '.genesis_time = "2023-03-28T15:00:00Z"' nois-1/genesis.json) && echo "$UPDATED" > nois-1/genesis.json
