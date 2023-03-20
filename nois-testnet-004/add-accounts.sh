@@ -32,7 +32,7 @@ validator_addresses=(
     "nois1u4v6aw9vpzvmcwux9mygc2fkgs64g27gku2ej4"
     "nois15rph43lzyqe2gem93nxxxalxqvqe7gg4q2sk5j"
     "nois1wsrjxq4tnt5sxj6p8v524zj4nf0d776y2rrcz9"
-    "nois1njft7renhj5ny0cfmj4pvv9t8zc7ccrph0ncyl"
+    "nois1ysszgcfrl8tnq3yu4pd6dkzzs0awljqnjdxqqp"
     "nois19yul78yu9jzay9afsyjgmv0pk0k5rl803agdxj"
     "nois1knljz5pa3uyh7n83e54p6x4u0g3crdjlxqk4dm"
     "nois16af5x850nre0qu8gprux3qhfnaq4k7s7nu8nku"
