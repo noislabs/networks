@@ -166,8 +166,16 @@ validator_addresses=(
     "nois1g40rlulkjngw8fpe6f079vw80ykgskt0j4udcr"
     "nois1zt338fp758c6hlnma54a7vc076ltz48l72t7fp"
     "nois1t3y5t8upn37plq3sm0dkz247met3pvrnczl4tm"
+    "nois1m75ljwympv4dys9z57nkzlk0x9ww9h72jhghcm"
+    "nois1zhhwr8gk8pqf9p9eamxnqqstmtszjazwdrnref"
+    "nois1a5fss66lzpc90q4aje4sw3aug8968xs4nzqrwz"
+    "nois14de6yy0g7kp5z9w7tg8wsnp8yg6vzxy4vm0eyl"
+    "nois1juu47n3z4trp3tcz77q3vmyh60kqc8m9z9a32a"
+    "nois1ha9myf0achfplyqnc72y0gvltfy2sqfsp33sla"
 )
 
+# No vesting
+############
 # Early validators
 account_balance=20000 #0.01%
 uaccount_balance=$(expr $account_balance \* 1000000)
@@ -181,6 +189,14 @@ account_balance=150000000 #75%
 uaccount_balance=$(expr $account_balance \* 1000000)
 noisd add-genesis-account nois103y4f6h80lc45nr8chuzr3fyzqywm9n0d8fxzu "$uaccount_balance"unois
 
+# Juno Communications DAO
+account_balance=200000 #0.1% 
+uaccount_balance=$(expr $account_balance \* 1000000)
+noisd add-genesis-account nois1msxmzpu4uta8c9a2336tv4w2v2kz4fzmmvjlha  "$uaccount_balance"unois 
+
+# Vesting
+#########
+
 # > 1.5% gets 7 years vesting
 account_balance=10000000 #5%
 uaccount_balance=$(expr $account_balance \* 1000000)
@@ -192,6 +208,10 @@ account_balance=3000000 #1.5%
 uaccount_balance=$(expr $account_balance \* 1000000)
 noisd add-genesis-account nois128tdu0w2ga9wh9nyy9j5dmz5q7ed4qk8zaqcmv "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_5_years_timestamp 
 noisd add-genesis-account nois1hw4ctf2tm8j9avy3vjchxcpew4mhhj8m5zt9xn "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_5_years_timestamp 
+
+account_balance=1000000 #0.5%
+uaccount_balance=$(expr $account_balance \* 1000000)
+noisd add-genesis-account nois1c92z6nw7q4zlramgu73qx930qlndenghez6h2m "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_5_years_timestamp 
 
 account_balance=500000 #0.25% 
 uaccount_balance=$(expr $account_balance \* 1000000)
@@ -218,6 +238,6 @@ noisd add-genesis-account nois140l6y2gp3gxvay6qtn70re7z2s0gn57za3ww2e  "$uaccoun
 
 # This is how I run this script (works on my machine).
 # nois-testnet-004
-# rm ~/.noisd/config/genesis.json ; noisd init katarina --chain-id nois-testnet-004 && noisd prepare-genesis nois-testnet-004 && nois-testnet-004/add-accounts.sh && cp ~/.noisd/config/genesis.json nois-testnet-004/genesis.json
+# rm ~/.noisd/config/genesis.json ; noisd init katarina --chain-id nois-testnet-004 && noisd prepare-genesis nois-testnet-004 && nois-testnet-004/add-accounts.sh && cp ~/.noisd/config/genesis.json nois-testnet-004/genesis.json && UPDATED=$(jq '.genesis_time = "2023-03-21T15:00:00Z"' nois-testnet-004/genesis.json) && echo "$UPDATED" > nois-testnet-004/genesis.json
 # nois-1
-# rm ~/.noisd/config/genesis.json ; noisd init katarina --chain-id nois-1 && noisd prepare-genesis nois-1 && nois-testnet-004/add-accounts.sh && cp ~/.noisd/config/genesis.json nois-1/genesis.json
+# rm ~/.noisd/config/genesis.json ; noisd init katarina --chain-id nois-1 && noisd prepare-genesis nois-1 && nois-testnet-004/add-accounts.sh && cp ~/.noisd/config/genesis.json nois-1/genesis.json && UPDATED=$(jq '.genesis_time = "2023-03-21T15:00:00Z"' nois-1/genesis.json) && echo "$UPDATED" > nois-1/genesis.json
