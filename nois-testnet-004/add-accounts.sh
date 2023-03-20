@@ -190,6 +190,11 @@ account_balance=150000000 #75%
 uaccount_balance=$(expr $account_balance \* 1000000)
 noisd add-genesis-account nois103y4f6h80lc45nr8chuzr3fyzqywm9n0d8fxzu "$uaccount_balance"unois
 
+# Icecube calculated address
+account_balance=10000000 #5%
+uaccount_balance=$(expr $account_balance \* 1000000)
+noisd add-genesis-account nois1mdjzz7y7crnjgfkdld4x9ravqymh22jy2c7jpukqnkghhzv5s9ys2a9hu7 "$uaccount_balance"unois
+
 # Juno Communications DAO
 account_balance=200000 #0.1% 
 uaccount_balance=$(expr $account_balance \* 1000000)
