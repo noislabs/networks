@@ -1,9 +1,10 @@
 #!/bin/bash
 
-current_timestamp=$(date "+%s") # $(date +%s);
-in_3_years_timestamp=$(date -v+3y "+%s") # $(date -d '+3 years' +%s)
-in_5_years_timestamp=$(date -v+5y "+%s") # $(date -d '+5 years' +%s)
-in_7_years_timestamp=$(date -v+7y "+%s") # $(date -d '+7 years' +%s)
+#start_vesting_time=$(date "+%s") # $(date +%s);
+start_vesting_time=1679352033
+in_3_years_timestamp=$(date -r "$start_vesting_time" -v+3y +%s)
+in_5_years_timestamp=$(date -r "$start_vesting_time" -v+5y +%s)
+in_7_years_timestamp=$(date -r "$start_vesting_time" -v+7y +%s)
 free_amount=20000
 ufree_amount=$(expr $free_amount \* 1000000)
 
@@ -210,46 +211,59 @@ noisd add-genesis-account nois1msxmzpu4uta8c9a2336tv4w2v2kz4fzmmvjlha  "$uaccoun
 # > 1.5% gets 7 years vesting
 account_balance=10000000 #5%
 uaccount_balance=$(expr $account_balance \* 1000000)
-noisd add-genesis-account nois10cnf56nhfzsddg0qmvc7p3kfrt9l43f6hheqc8 "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_7_years_timestamp
-noisd add-genesis-account nois1wrcs6v5d4772ajwaf5c5kp275e9h82vcvpnzfa "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_7_years_timestamp
+noisd add-genesis-account nois10cnf56nhfzsddg0qmvc7p3kfrt9l43f6hheqc8 "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $start_vesting_time --vesting-end-time $in_7_years_timestamp
+noisd add-genesis-account nois1wrcs6v5d4772ajwaf5c5kp275e9h82vcvpnzfa "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $start_vesting_time --vesting-end-time $in_7_years_timestamp
 
 # From > 0.15% to <= 1.5% gets 5 year vesting
 account_balance=3000000 #1.5%
 uaccount_balance=$(expr $account_balance \* 1000000)
-noisd add-genesis-account nois128tdu0w2ga9wh9nyy9j5dmz5q7ed4qk8zaqcmv "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_5_years_timestamp 
-noisd add-genesis-account nois1hw4ctf2tm8j9avy3vjchxcpew4mhhj8m5zt9xn "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_5_years_timestamp 
+noisd add-genesis-account nois128tdu0w2ga9wh9nyy9j5dmz5q7ed4qk8zaqcmv "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $start_vesting_time --vesting-end-time $in_5_years_timestamp 
+noisd add-genesis-account nois1hw4ctf2tm8j9avy3vjchxcpew4mhhj8m5zt9xn "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $start_vesting_time --vesting-end-time $in_5_years_timestamp 
 
 account_balance=1000000 #0.5%
 uaccount_balance=$(expr $account_balance \* 1000000)
-noisd add-genesis-account nois1c92z6nw7q4zlramgu73qx930qlndenghez6h2m "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_5_years_timestamp 
+noisd add-genesis-account nois1c92z6nw7q4zlramgu73qx930qlndenghez6h2m "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $start_vesting_time --vesting-end-time $in_5_years_timestamp 
+
+account_balance=600000 #0.3%
+uaccount_balance=$(expr $account_balance \* 1000000)
+noisd add-genesis-account nois1ecy9kut55zhxxtpdc0jhamlyeclqy7dyhjvcy3 "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $start_vesting_time --vesting-end-time $in_5_years_timestamp 
+
 
 account_balance=500000 #0.25% 
 uaccount_balance=$(expr $account_balance \* 1000000)
 #DesignDAO
-noisd add-genesis-account nois1m2zatj530ntxa4ztcrltj7e272exqrgm9ddkg8 "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_5_years_timestamp 
-noisd add-genesis-account nois1zyrv5j5jh9x7auuun36xpdnmpgqa2w0c66flrj "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_5_years_timestamp 
-noisd add-genesis-account nois1w2ndjxeyj3xuudn50y4xraj8ugxxwckm6pgng3 "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_5_years_timestamp 
+noisd add-genesis-account nois1m2zatj530ntxa4ztcrltj7e272exqrgm9ddkg8 "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $start_vesting_time --vesting-end-time $in_5_years_timestamp 
+noisd add-genesis-account nois1zyrv5j5jh9x7auuun36xpdnmpgqa2w0c66flrj "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $start_vesting_time --vesting-end-time $in_5_years_timestamp 
+noisd add-genesis-account nois1w2ndjxeyj3xuudn50y4xraj8ugxxwckm6pgng3 "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $start_vesting_time --vesting-end-time $in_5_years_timestamp 
 
 
 # From > 0.015% to <= 0.15% gets 3 year vesting
 
 account_balance=200000 #0.1% 
 uaccount_balance=$(expr $account_balance \* 1000000)
-noisd add-genesis-account nois1av86gm7rnsgq6vsvf09z4nkae235cvg0fe554j "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_3_years_timestamp 
-noisd add-genesis-account nois16e7gnczk2jv20gdzqmfxgrxuwdty6g36t42mv2 "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_3_years_timestamp 
-noisd add-genesis-account nois17dn5e2n6w60pzyxeq79apr05r6jzfw7ws8e9lr "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_3_years_timestamp 
-noisd add-genesis-account nois1kaq7tw7y8lsr7etjglfc4n5yc68fzyvlxpcf6w "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_3_years_timestamp  
-noisd add-genesis-account nois1qt9xm0yml93ltf8rg0q7pylgzgkyxrtuj6nvzs "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_3_years_timestamp 
-noisd add-genesis-account nois1932p8lwv65z7wyh2jnw7sqshuldhynm69e7jm7 "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_3_years_timestamp 
+noisd add-genesis-account nois1av86gm7rnsgq6vsvf09z4nkae235cvg0fe554j "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $start_vesting_time --vesting-end-time $in_3_years_timestamp 
+noisd add-genesis-account nois16e7gnczk2jv20gdzqmfxgrxuwdty6g36t42mv2 "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $start_vesting_time --vesting-end-time $in_3_years_timestamp 
+noisd add-genesis-account nois17dn5e2n6w60pzyxeq79apr05r6jzfw7ws8e9lr "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $start_vesting_time --vesting-end-time $in_3_years_timestamp 
+noisd add-genesis-account nois1kaq7tw7y8lsr7etjglfc4n5yc68fzyvlxpcf6w "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $start_vesting_time --vesting-end-time $in_3_years_timestamp  
+noisd add-genesis-account nois1qt9xm0yml93ltf8rg0q7pylgzgkyxrtuj6nvzs "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $start_vesting_time --vesting-end-time $in_3_years_timestamp 
+noisd add-genesis-account nois1932p8lwv65z7wyh2jnw7sqshuldhynm69e7jm7 "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $start_vesting_time --vesting-end-time $in_3_years_timestamp 
 
 account_balance=220000 #0.11% 
 uaccount_balance=$(expr $account_balance \* 1000000)
-noisd add-genesis-account nois1ua2qf3vfu5v4f547ndvze0jptm3zxl8rwtll0k  "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_3_years_timestamp  
-noisd add-genesis-account nois140l6y2gp3gxvay6qtn70re7z2s0gn57za3ww2e  "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_3_years_timestamp 
+noisd add-genesis-account nois1ua2qf3vfu5v4f547ndvze0jptm3zxl8rwtll0k  "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $start_vesting_time --vesting-end-time $in_3_years_timestamp  
+noisd add-genesis-account nois140l6y2gp3gxvay6qtn70re7z2s0gn57za3ww2e  "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $start_vesting_time --vesting-end-time $in_3_years_timestamp 
 
 
 # This is how I run this script (works on my machine).
 # nois-testnet-004
-# rm ~/.noisd/config/genesis.json ; noisd init katarina --chain-id nois-testnet-004 && noisd prepare-genesis nois-testnet-004 && nois-testnet-004/add-accounts.sh && cp ~/.noisd/config/genesis.json nois-testnet-004/genesis.json && UPDATED=$(jq '.genesis_time = "2023-03-21T15:00:00Z"' nois-testnet-004/genesis.json) && echo "$UPDATED" > nois-testnet-004/genesis.json
+# rm ~/.noisd/config/genesis.json ; noisd init katarina --chain-id nois-testnet-004 && noisd prepare-genesis nois-testnet-004 && nois-testnet-004/add-accounts.sh && noisd collect-gentxs --gentx-dir nois-testnet-004/gentx && cp ~/.noisd/config/genesis.json nois-testnet-004/genesis.json && UPDATED=$(jq '.genesis_time = "2023-03-21T15:00:00Z"' nois-testnet-004/genesis.json) && echo "$UPDATED" > nois-testnet-004/genesis.json
 # nois-1
-# rm ~/.noisd/config/genesis.json ; noisd init katarina --chain-id nois-1 && noisd prepare-genesis nois-1 && nois-testnet-004/add-accounts.sh && cp ~/.noisd/config/genesis.json nois-1/genesis.json && UPDATED=$(jq '.genesis_time = "2023-03-28T15:00:00Z"' nois-1/genesis.json) && echo "$UPDATED" > nois-1/genesis.json
+# rm ~/.noisd/config/genesis.json ; noisd init katarina --chain-id nois-1 && noisd prepare-genesis nois-1 && nois-testnet-004/add-accounts.sh && noisd collect-gentxs --gentx-dir nois-1/gentx && cp ~/.noisd/config/genesis.json nois-1/genesis.json && UPDATED=$(jq '.genesis_time = "2023-03-28T15:00:00Z"' nois-1/genesis.json) && echo "$UPDATED" > nois-1/genesis.json
+
+
+
+
+
+
+
+
