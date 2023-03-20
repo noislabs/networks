@@ -181,13 +181,13 @@ account_balance=150000000 #75%
 uaccount_balance=$(expr $account_balance \* 1000000)
 noisd add-genesis-account nois103y4f6h80lc45nr8chuzr3fyzqywm9n0d8fxzu "$uaccount_balance"unois
 
-# 5% =< 7 year vesting
+# > 1.5% gets 7 years vesting
 account_balance=10000000 #5%
 uaccount_balance=$(expr $account_balance \* 1000000)
 noisd add-genesis-account nois10cnf56nhfzsddg0qmvc7p3kfrt9l43f6hheqc8 "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_7_years_timestamp
 noisd add-genesis-account nois1wrcs6v5d4772ajwaf5c5kp275e9h82vcvpnzfa "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_7_years_timestamp
 
-# 0.15% =< 5 year vesting <5%
+# From > 0.15% to <= 1.5% gets 5 year vesting
 account_balance=3000000 #1.5%
 uaccount_balance=$(expr $account_balance \* 1000000)
 noisd add-genesis-account nois128tdu0w2ga9wh9nyy9j5dmz5q7ed4qk8zaqcmv "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_5_years_timestamp 
@@ -200,7 +200,7 @@ noisd add-genesis-account nois1m2zatj530ntxa4ztcrltj7e272exqrgm9ddkg8 "$uaccount
 noisd add-genesis-account nois1zyrv5j5jh9x7auuun36xpdnmpgqa2w0c66flrj "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_5_years_timestamp 
 
 
-#  0.015% =< 3 year vesting < 0.15% 
+# From > 0.015% to <= 0.15% gets 3 year vesting
 
 account_balance=200000 #0.1% 
 uaccount_balance=$(expr $account_balance \* 1000000)
