@@ -173,6 +173,7 @@ validator_addresses=(
     "nois1juu47n3z4trp3tcz77q3vmyh60kqc8m9z9a32a"
     "nois1ha9myf0achfplyqnc72y0gvltfy2sqfsp33sla"
     "nois1pq6spkms6p42djr9tsfqmlnngaf7aht8t84anz"
+    "nois1zefr9ncfpyjm3af6g7e4sxf3ywmlecyjtedtsp"
 )
 
 # No vesting
@@ -236,6 +237,7 @@ noisd add-genesis-account nois16e7gnczk2jv20gdzqmfxgrxuwdty6g36t42mv2 "$uaccount
 noisd add-genesis-account nois17dn5e2n6w60pzyxeq79apr05r6jzfw7ws8e9lr "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_3_years_timestamp 
 noisd add-genesis-account nois1kaq7tw7y8lsr7etjglfc4n5yc68fzyvlxpcf6w "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_3_years_timestamp  
 noisd add-genesis-account nois1qt9xm0yml93ltf8rg0q7pylgzgkyxrtuj6nvzs "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_3_years_timestamp 
+noisd add-genesis-account nois1932p8lwv65z7wyh2jnw7sqshuldhynm69e7jm7 "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_3_years_timestamp 
 
 account_balance=220000 #0.11% 
 uaccount_balance=$(expr $account_balance \* 1000000)
