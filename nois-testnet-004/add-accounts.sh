@@ -8,6 +8,7 @@ free_amount=20000
 ufree_amount=$(expr $free_amount \* 1000000)
 
 validator_addresses=(
+    "nois1p9tw323xdjp5q3yzuecfahmgrpufmm89z93wpk"
     "nois17quau8ah8zdadkyflz0h6ead27n2yjj90v49lf"
     "nois1pm7zfz2z80wyl5clt3dhjduwc93gw7yh33dnwf"
     "nois15kzwgak8upfc498ve80u9zjcd459dj384n663r"
