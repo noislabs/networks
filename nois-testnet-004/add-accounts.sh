@@ -172,6 +172,7 @@ validator_addresses=(
     "nois14de6yy0g7kp5z9w7tg8wsnp8yg6vzxy4vm0eyl"
     "nois1juu47n3z4trp3tcz77q3vmyh60kqc8m9z9a32a"
     "nois1ha9myf0achfplyqnc72y0gvltfy2sqfsp33sla"
+    "nois1pq6spkms6p42djr9tsfqmlnngaf7aht8t84anz"
 )
 
 # No vesting
