@@ -165,6 +165,7 @@ validator_addresses=(
     "nois1nevy9pek8fjn7c3fja5pfjakwudx4v5f86a782"
     "nois1g40rlulkjngw8fpe6f079vw80ykgskt0j4udcr"
     "nois1zt338fp758c6hlnma54a7vc076ltz48l72t7fp"
+    "nois1t3y5t8upn37plq3sm0dkz247met3pvrnczl4tm"
 )
 
 # Early validators
@@ -175,19 +176,32 @@ do
     noisd add-genesis-account "$validator_address" "$uaccount_balance"unois
 done
 
-# 7 year vesting
+# Community pool init address
+account_balance=150000000 #75%
+uaccount_balance=$(expr $account_balance \* 1000000)
+noisd add-genesis-account nois103y4f6h80lc45nr8chuzr3fyzqywm9n0d8fxzu "$uaccount_balance"unois
+
+# 5% =< 7 year vesting
 account_balance=10000000 #5%
 uaccount_balance=$(expr $account_balance \* 1000000)
 noisd add-genesis-account nois10cnf56nhfzsddg0qmvc7p3kfrt9l43f6hheqc8 "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_7_years_timestamp
 noisd add-genesis-account nois1wrcs6v5d4772ajwaf5c5kp275e9h82vcvpnzfa "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_7_years_timestamp
 
-# 5 year vesting
+# 0.15% =< 5 year vesting <5%
 account_balance=3000000 #1.5%
 uaccount_balance=$(expr $account_balance \* 1000000)
 noisd add-genesis-account nois128tdu0w2ga9wh9nyy9j5dmz5q7ed4qk8zaqcmv "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_5_years_timestamp 
 noisd add-genesis-account nois1hw4ctf2tm8j9avy3vjchxcpew4mhhj8m5zt9xn "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_5_years_timestamp 
 
-# 3 year vesting
+account_balance=500000 #0.25% 
+uaccount_balance=$(expr $account_balance \* 1000000)
+#DesignDAO
+noisd add-genesis-account nois1m2zatj530ntxa4ztcrltj7e272exqrgm9ddkg8 "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_5_years_timestamp 
+noisd add-genesis-account nois1zyrv5j5jh9x7auuun36xpdnmpgqa2w0c66flrj "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_5_years_timestamp 
+
+
+#  0.015% =< 3 year vesting < 0.15% 
+
 account_balance=200000 #0.1% 
 uaccount_balance=$(expr $account_balance \* 1000000)
 noisd add-genesis-account nois1av86gm7rnsgq6vsvf09z4nkae235cvg0fe554j "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_3_years_timestamp 
@@ -200,3 +214,10 @@ account_balance=220000 #0.11%
 uaccount_balance=$(expr $account_balance \* 1000000)
 noisd add-genesis-account nois1ua2qf3vfu5v4f547ndvze0jptm3zxl8rwtll0k  "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_3_years_timestamp  
 noisd add-genesis-account nois140l6y2gp3gxvay6qtn70re7z2s0gn57za3ww2e  "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_3_years_timestamp 
+
+
+# This is how I run this script (works on my machine).
+# nois-testnet-004
+# rm ~/.noisd/config/genesis.json ; noisd init katarina --chain-id nois-testnet-004 && noisd prepare-genesis nois-testnet-004 && nois-testnet-004/add-accounts.sh && cp ~/.noisd/config/genesis.json nois-testnet-004/genesis.json
+# nois-1
+# rm ~/.noisd/config/genesis.json ; noisd init katarina --chain-id nois-1 && noisd prepare-genesis nois-1 && nois-testnet-004/add-accounts.sh && cp ~/.noisd/config/genesis.json nois-1/genesis.json
