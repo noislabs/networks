@@ -224,6 +224,7 @@ uaccount_balance=$(expr $account_balance \* 1000000)
 #DesignDAO
 noisd add-genesis-account nois1m2zatj530ntxa4ztcrltj7e272exqrgm9ddkg8 "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_5_years_timestamp 
 noisd add-genesis-account nois1zyrv5j5jh9x7auuun36xpdnmpgqa2w0c66flrj "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_5_years_timestamp 
+noisd add-genesis-account nois1w2ndjxeyj3xuudn50y4xraj8ugxxwckm6pgng3 "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $current_timestamp --vesting-end-time $in_5_years_timestamp 
 
 
 # From > 0.015% to <= 0.15% gets 3 year vesting
