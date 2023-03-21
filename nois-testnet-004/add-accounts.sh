@@ -1,6 +1,5 @@
 #!/bin/bash
 
-#start_vesting_time=$(date "+%s") # $(date +%s);
 start_vesting_time=1679352033
 in_3_years_timestamp=$(date -r "$start_vesting_time" -v+3y +%s)
 in_5_years_timestamp=$(date -r "$start_vesting_time" -v+5y +%s)
@@ -189,6 +188,11 @@ for validator_address in "${validator_addresses[@]}"
 do
     noisd add-genesis-account "$validator_address" "$uaccount_balance"unois
 done
+
+# Sink calculated address 2,54% early contributors non validators + 32 missing early validators 0,32% 
+account_balance=5720000 #2,86% Not allocated yet
+uaccount_balance=$(expr $account_balance \* 1000000)
+noisd add-genesis-account nois16rpxzry8jf06j8htjphf0lnmylh28enwm4xwkfpn3699wvyys2yqgcev3h "$uaccount_balance"unois
 
 # Community pool init address
 account_balance=150000000 #75%
