@@ -192,7 +192,7 @@ done
 # Sink calculated address 2,54% early contributors non validators + 32 missing early validators 0,32% 
 account_balance=5720000 #2,86% Not allocated yet
 uaccount_balance=$(expr $account_balance \* 1000000)
-noisd add-genesis-account nois16rpxzry8jf06j8htjphf0lnmylh28enwm4xwkfpn3699wvyys2yqgcev3h "$uaccount_balance"unois
+#noisd add-genesis-account nois16rpxzry8jf06j8htjphf0lnmylh28enwm4xwkfpn3699wvyys2yqgcev3h "$uaccount_balance"unois
 
 # Community pool init address
 account_balance=150000000 #75%
@@ -208,6 +208,9 @@ noisd add-genesis-account nois1mdjzz7y7crnjgfkdld4x9ravqymh22jy2c7jpukqnkghhzv5s
 account_balance=200000 #0.1% 
 uaccount_balance=$(expr $account_balance \* 1000000)
 noisd add-genesis-account nois1msxmzpu4uta8c9a2336tv4w2v2kz4fzmmvjlha  "$uaccount_balance"unois 
+
+#Superstar DAO
+noisd add-genesis-account nois1932p8lwv65z7wyh2jnw7sqshuldhynm69e7jm7 "$uaccount_balance"unois
 
 # Vesting
 #########
@@ -250,7 +253,6 @@ noisd add-genesis-account nois16e7gnczk2jv20gdzqmfxgrxuwdty6g36t42mv2 "$uaccount
 noisd add-genesis-account nois17dn5e2n6w60pzyxeq79apr05r6jzfw7ws8e9lr "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $start_vesting_time --vesting-end-time $in_3_years_timestamp 
 noisd add-genesis-account nois1kaq7tw7y8lsr7etjglfc4n5yc68fzyvlxpcf6w "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $start_vesting_time --vesting-end-time $in_3_years_timestamp  
 noisd add-genesis-account nois1qt9xm0yml93ltf8rg0q7pylgzgkyxrtuj6nvzs "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $start_vesting_time --vesting-end-time $in_3_years_timestamp 
-noisd add-genesis-account nois1932p8lwv65z7wyh2jnw7sqshuldhynm69e7jm7 "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $start_vesting_time --vesting-end-time $in_3_years_timestamp 
 
 account_balance=220000 #0.11% 
 uaccount_balance=$(expr $account_balance \* 1000000)
