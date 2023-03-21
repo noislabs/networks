@@ -1234,6 +1234,13 @@
           "sequence": "0"
         },
         {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "nois1932p8lwv65z7wyh2jnw7sqshuldhynm69e7jm7",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
           "@type": "/cosmos.vesting.v1beta1.ContinuousVestingAccount",
           "base_vesting_account": {
             "base_account": {
@@ -1511,27 +1518,6 @@
           "base_vesting_account": {
             "base_account": {
               "address": "nois1qt9xm0yml93ltf8rg0q7pylgzgkyxrtuj6nvzs",
-              "pub_key": null,
-              "account_number": "0",
-              "sequence": "0"
-            },
-            "original_vesting": [
-              {
-                "denom": "unois",
-                "amount": "180000000000"
-              }
-            ],
-            "delegated_free": [],
-            "delegated_vesting": [],
-            "end_time": "1774046433"
-          },
-          "start_time": "1679352033"
-        },
-        {
-          "@type": "/cosmos.vesting.v1beta1.ContinuousVestingAccount",
-          "base_vesting_account": {
-            "base_account": {
-              "address": "nois1932p8lwv65z7wyh2jnw7sqshuldhynm69e7jm7",
               "pub_key": null,
               "account_number": "0",
               "sequence": "0"
@@ -4088,7 +4074,7 @@
               {
                 "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
                 "description": {
-                  "moniker": "nois-main",
+                  "moniker": "Stake&Relax",
                   "identity": "BD90F7F27099E9E3",
                   "website": "https://linktr.ee/stakeandrelax",
                   "security_contact": "",
@@ -4140,7 +4126,7 @@
             }
           },
           "signatures": [
-            "z+3OU1ZbHiXCNGDfSzzNP7uzEZX9U3bvnfEdWPtN3vE0s1G1f2f0giXlhdbZ9dL0dEeWD5HDPA/D+uPIu4sljQ=="
+            "JcvOVq7imL5wIsF53jn3LdpqY4hLmsHCgCJuKALf84JWRkClx6dmY74jvOR7U4z3VMn2HfG6NblphTnIled4kw=="
           ]
         },
         {
