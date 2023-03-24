@@ -1214,6 +1214,13 @@
         },
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "nois1lsawseza2ctwv4scvf4kfarflcl9gq52ejgssl",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
           "address": "nois103y4f6h80lc45nr8chuzr3fyzqywm9n0d8fxzu",
           "pub_key": null,
           "account_number": "0",
@@ -3217,6 +3224,15 @@
           ]
         },
         {
+          "address": "nois1lsawseza2ctwv4scvf4kfarflcl9gq52ejgssl",
+          "coins": [
+            {
+              "denom": "unois",
+              "amount": "20000000000"
+            }
+          ]
+        },
+        {
           "address": "nois1ljvdlhws6j5md5srpy7jdrxpuhpx2k7wy80v8g",
           "coins": [
             {
@@ -3274,7 +3290,7 @@
       "supply": [
         {
           "denom": "unois",
-          "amount": "194280000000000"
+          "amount": "194300000000000"
         }
       ],
       "denom_metadata": [
