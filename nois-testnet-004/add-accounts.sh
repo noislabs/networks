@@ -166,8 +166,8 @@ validator_addresses=(
     "nois1sqtzwhetv5az4e9vvmpvuew479ar70l3rqu94q" 
     "nois1g6rfmu0gcc3avke35c9wemu8f0kxdrvnz4wgqt" 
     "nois1nevy9pek8fjn7c3fja5pfjakwudx4v5f86a782"
-    "nois1g40rlulkjngw8fpe6f079vw80ykgskt0j4udcr"
-    "nois1zt338fp758c6hlnma54a7vc076ltz48l72t7fp"
+    "nois1rnrjtj7fmqp8g3lqxrr6rwgd82sr7pgd2kuwwk"
+    "nois10cal9snj3vdqcdq40fu2ehccp6cv589c472ljp"
     "nois1t3y5t8upn37plq3sm0dkz247met3pvrnczl4tm"
     "nois1m75ljwympv4dys9z57nkzlk0x9ww9h72jhghcm"
     "nois1zhhwr8gk8pqf9p9eamxnqqstmtszjazwdrnref"
@@ -209,10 +209,13 @@ noisd add-genesis-account nois1mdjzz7y7crnjgfkdld4x9ravqymh22jy2c7jpukqnkghhzv5s
 # Juno Communications DAO
 account_balance=200000 #0.1% 
 uaccount_balance=$(expr $account_balance \* 1000000)
-noisd add-genesis-account nois1msxmzpu4uta8c9a2336tv4w2v2kz4fzmmvjlha  "$uaccount_balance"unois 
+noisd add-genesis-account nois1msxmzpu4uta8c9a2336tv4w2v2kz4fzmmvjlha "$uaccount_balance"unois 
 
-#Superstar DAO
+# Superstar DAO
 noisd add-genesis-account nois1932p8lwv65z7wyh2jnw7sqshuldhynm69e7jm7 "$uaccount_balance"unois
+
+# Gelotto
+noisd add-genesis-account nois159n0yegww6ae7rq0mracxc4mtjtq9fk2m3q2wl "$uaccount_balance"unois
 
 # Vesting
 #########
