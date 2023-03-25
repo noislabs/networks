@@ -166,8 +166,8 @@ validator_addresses=(
     "nois1sqtzwhetv5az4e9vvmpvuew479ar70l3rqu94q" 
     "nois1g6rfmu0gcc3avke35c9wemu8f0kxdrvnz4wgqt" 
     "nois1nevy9pek8fjn7c3fja5pfjakwudx4v5f86a782"
-    "nois1g40rlulkjngw8fpe6f079vw80ykgskt0j4udcr"
-    "nois1zt338fp758c6hlnma54a7vc076ltz48l72t7fp"
+    "nois1rnrjtj7fmqp8g3lqxrr6rwgd82sr7pgd2kuwwk"
+    "nois10cal9snj3vdqcdq40fu2ehccp6cv589c472ljp"
     "nois1t3y5t8upn37plq3sm0dkz247met3pvrnczl4tm"
     "nois1m75ljwympv4dys9z57nkzlk0x9ww9h72jhghcm"
     "nois1zhhwr8gk8pqf9p9eamxnqqstmtszjazwdrnref"
@@ -177,6 +177,8 @@ validator_addresses=(
     "nois1ha9myf0achfplyqnc72y0gvltfy2sqfsp33sla"
     "nois1pq6spkms6p42djr9tsfqmlnngaf7aht8t84anz"
     "nois1zefr9ncfpyjm3af6g7e4sxf3ywmlecyjtedtsp"
+    "nois1lsawseza2ctwv4scvf4kfarflcl9gq52ejgssl"
+    
 )
 
 # No vesting
@@ -189,10 +191,11 @@ do
     noisd add-genesis-account "$validator_address" "$uaccount_balance"unois
 done
 
-# Sink calculated address 2,54% early contributors non validators + 32 missing early validators 0,32% 
-account_balance=5720000 #2,86% Not allocated yet
+# Sink calculated address
+# 31 missing early validators who did not send their nois address. Those funds will be burnt in the nois-sink contract.
+account_balance=620000 #0,31% Not allocated
 uaccount_balance=$(expr $account_balance \* 1000000)
-#noisd add-genesis-account nois16rpxzry8jf06j8htjphf0lnmylh28enwm4xwkfpn3699wvyys2yqgcev3h "$uaccount_balance"unois
+noisd add-genesis-account nois16rpxzry8jf06j8htjphf0lnmylh28enwm4xwkfpn3699wvyys2yqgcev3h "$uaccount_balance"unois
 
 # Community pool init address
 account_balance=150000000 #75%
@@ -204,12 +207,34 @@ account_balance=10000000 #5%
 uaccount_balance=$(expr $account_balance \* 1000000)
 noisd add-genesis-account nois1mdjzz7y7crnjgfkdld4x9ravqymh22jy2c7jpukqnkghhzv5s9ys2a9hu7 "$uaccount_balance"unois
 
+# Extra partners
+account_balance=2480000 #1.24%
+uaccount_balance=$(expr $account_balance \* 1000000)
+noisd add-genesis-account nois1gfk3rnm8fsqmcmrcs6urpzjuryj3qvy643pm3j "$uaccount_balance"unois
+
+# Stargaze community pool
+account_balance=800000 #0.4%
+uaccount_balance=$(expr $account_balance \* 1000000)
+noisd add-genesis-account nois18xsp37zc65690hlq0zm3q5sxcu2rpm4mxlvd73 "$uaccount_balance"unois
+
+
+# Payment contract
+account_balance=400000 #0.2% 
+uaccount_balance=$(expr $account_balance \* 1000000)
+# Gelotto payment 
+noisd add-genesis-account nois159n0yegww6ae7rq0mracxc4mtjtq9fk2m3q2wl "$uaccount_balance"unois 
+# Dymension payment 
+noisd add-genesis-account nois184jtasqt37gyet6zj8amauz7h5rjjtujg8f4sf "$uaccount_balance"unois 
+# Aura payment 
+noisd add-genesis-account nois1t22zpwu9uuehyda3ld3tmwarnw0tng4u6yekul "$uaccount_balance"unois 
+# Raccoon payment 
+noisd add-genesis-account nois1t0jft9pwef30ksvs9w0l4h62l40etud6hn80mz "$uaccount_balance"unois 
+
 # Juno Communications DAO
 account_balance=200000 #0.1% 
 uaccount_balance=$(expr $account_balance \* 1000000)
-noisd add-genesis-account nois1msxmzpu4uta8c9a2336tv4w2v2kz4fzmmvjlha  "$uaccount_balance"unois 
-
-#Superstar DAO
+noisd add-genesis-account nois1msxmzpu4uta8c9a2336tv4w2v2kz4fzmmvjlha "$uaccount_balance"unois 
+# Superstar DAO
 noisd add-genesis-account nois1932p8lwv65z7wyh2jnw7sqshuldhynm69e7jm7 "$uaccount_balance"unois
 
 # Vesting
@@ -248,7 +273,8 @@ noisd add-genesis-account nois1w2ndjxeyj3xuudn50y4xraj8ugxxwckm6pgng3 "$uaccount
 
 account_balance=200000 #0.1% 
 uaccount_balance=$(expr $account_balance \* 1000000)
-noisd add-genesis-account nois1av86gm7rnsgq6vsvf09z4nkae235cvg0fe554j "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $start_vesting_time --vesting-end-time $in_3_years_timestamp 
+noisd add-genesis-account nois1av86gm7rnsgq6vsvf09z4nkae235cvg0fe554j "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $start_vesting_time --vesting-end-time $in_3_years_timestamp
+noisd add-genesis-account nois1wfmnamflj4yrtvm9n8edm2dact5lz9pmk9zlm2 "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $start_vesting_time --vesting-end-time $in_3_years_timestamp 
 noisd add-genesis-account nois16e7gnczk2jv20gdzqmfxgrxuwdty6g36t42mv2 "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $start_vesting_time --vesting-end-time $in_3_years_timestamp 
 noisd add-genesis-account nois17dn5e2n6w60pzyxeq79apr05r6jzfw7ws8e9lr "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $start_vesting_time --vesting-end-time $in_3_years_timestamp 
 noisd add-genesis-account nois1kaq7tw7y8lsr7etjglfc4n5yc68fzyvlxpcf6w "$uaccount_balance"unois --vesting-amount $((uaccount_balance - ufree_amount))unois --vesting-start-time $start_vesting_time --vesting-end-time $in_3_years_timestamp  
