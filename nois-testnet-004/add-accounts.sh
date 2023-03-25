@@ -191,7 +191,8 @@ do
     noisd add-genesis-account "$validator_address" "$uaccount_balance"unois
 done
 
-# Sink calculated address 31 missing early validators who did not send their nois address. Will be burnt in the nois-sink contract
+# Sink calculated address
+# 31 missing early validators who did not send their nois address. Those funds will be burnt in the nois-sink contract.
 account_balance=620000 #0,31% Not allocated
 uaccount_balance=$(expr $account_balance \* 1000000)
 noisd add-genesis-account nois16rpxzry8jf06j8htjphf0lnmylh28enwm4xwkfpn3699wvyys2yqgcev3h "$uaccount_balance"unois
