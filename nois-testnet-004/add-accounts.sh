@@ -195,7 +195,7 @@ done
 # 31 missing early validators who did not send their nois address. Those funds will be burnt in the nois-sink contract.
 account_balance=620000 #0,31% Not allocated
 uaccount_balance=$(expr $account_balance \* 1000000)
-noisd add-genesis-account nois16rpxzry8jf06j8htjphf0lnmylh28enwm4xwkfpn3699wvyys2yqgcev3h "$uaccount_balance"unois
+noisd add-genesis-account nois10c0ppz0n57hqrmfp7g7lqs6k4xk9rxhvcfkqt83r8mars2lc57mq0f6cty "$uaccount_balance"unois
 
 # Community pool init address
 account_balance=150000000 #75%
@@ -205,7 +205,7 @@ noisd add-genesis-account nois103y4f6h80lc45nr8chuzr3fyzqywm9n0d8fxzu "$uaccount
 # Icecube calculated address
 account_balance=10000000 #5%
 uaccount_balance=$(expr $account_balance \* 1000000)
-noisd add-genesis-account nois1mdjzz7y7crnjgfkdld4x9ravqymh22jy2c7jpukqnkghhzv5s9ys2a9hu7 "$uaccount_balance"unois
+noisd add-genesis-account nois1gwnfyx82rwgc4y9r8vx6nr9v35dwezw3dadw6h39mad9amg7shnsler5f0 "$uaccount_balance"unois
 
 # Extra partners
 account_balance=2480000 #1.24%
