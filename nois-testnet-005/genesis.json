@@ -1,5 +1,5 @@
 {
-  "genesis_time": "2023-03-28T23:37:30.160483Z",
+  "genesis_time": "2023-03-28T23:49:19.058819Z",
   "chain_id": "nois-testnet-005",
   "initial_height": "1",
   "consensus_params": {
@@ -59,13 +59,6 @@
         },
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "nois1lsawseza2ctwv4scvf4kfarflcl9gq52ejgssl",
-          "pub_key": null,
-          "account_number": "0",
-          "sequence": "0"
-        },
-        {
-          "@type": "/cosmos.auth.v1beta1.BaseAccount",
           "address": "nois103y4f6h80lc45nr8chuzr3fyzqywm9n0d8fxzu",
           "pub_key": null,
           "account_number": "0",
@@ -84,6 +77,13 @@
           "pub_key": null,
           "account_number": "0",
           "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "nois1qt9xm0yml93ltf8rg0q7pylgzgkyxrtuj6nvzs",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
         }
       ]
     },
@@ -96,6 +96,15 @@
         "default_send_enabled": true
       },
       "balances": [
+        {
+          "address": "nois1qt9xm0yml93ltf8rg0q7pylgzgkyxrtuj6nvzs",
+          "coins": [
+            {
+              "denom": "unois",
+              "amount": "100000000000"
+            }
+          ]
+        },
         {
           "address": "nois1pq6spkms6p42djr9tsfqmlnngaf7aht8t84anz",
           "coins": [
@@ -140,21 +149,12 @@
               "amount": "150000000000000"
             }
           ]
-        },
-        {
-          "address": "nois1lsawseza2ctwv4scvf4kfarflcl9gq52ejgssl",
-          "coins": [
-            {
-              "denom": "unois",
-              "amount": "1000000000"
-            }
-          ]
         }
       ],
       "supply": [
         {
           "denom": "unois",
-          "amount": "200003000000000"
+          "amount": "200102000000000"
         }
       ],
       "denom_metadata": [
