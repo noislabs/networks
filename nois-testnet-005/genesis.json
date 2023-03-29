@@ -1,5 +1,5 @@
 {
-  "genesis_time": "2023-03-28T23:49:19.058819Z",
+  "genesis_time": "2023-03-29T11:31:04.968227Z",
   "chain_id": "nois-testnet-005",
   "initial_height": "1",
   "consensus_params": {
@@ -45,14 +45,70 @@
       "accounts": [
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "nois1pq6spkms6p42djr9tsfqmlnngaf7aht8t84anz",
+          "address": "nois19t6kxd4mmkawxtmejxjt3x597xtdevufxug0ma",
           "pub_key": null,
           "account_number": "0",
           "sequence": "0"
         },
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "nois1zefr9ncfpyjm3af6g7e4sxf3ywmlecyjtedtsp",
+          "address": "nois100qzcjdn7skz478ua0fh6vsahpyupjw96pdgwx",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "nois1etx55kw7tkmnjqz0k0mups4ewxlr324tyag9j7",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "nois1j2nyll7ll64pwkv9270juletq4fq7y8uq0t73n",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "nois145mpz0qyfmgnv6vve44tmj3hl6x0y8um8k6kx8",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "nois1epgapw0pea4dz2pmhpneqf7fezkldmcvcd82sz",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "nois1mgdef8haxlvxmml25m2uwlmljqznlsjm03kxu9",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "nois17ndyyhdtdx33c5nmnl40eamr9lg35ej7vacpuq",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "nois1k343zj53k3w3ju58qmgug4kdzlhpf0tymj5r9t",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "nois1wuyjnslsx64ehn5v8kr9d9wargc3vlea07aqm3",
           "pub_key": null,
           "account_number": "0",
           "sequence": "0"
@@ -106,16 +162,7 @@
           ]
         },
         {
-          "address": "nois1pq6spkms6p42djr9tsfqmlnngaf7aht8t84anz",
-          "coins": [
-            {
-              "denom": "unois",
-              "amount": "1000000000"
-            }
-          ]
-        },
-        {
-          "address": "nois1zefr9ncfpyjm3af6g7e4sxf3ywmlecyjtedtsp",
+          "address": "nois19t6kxd4mmkawxtmejxjt3x597xtdevufxug0ma",
           "coins": [
             {
               "denom": "unois",
@@ -142,6 +189,24 @@
           ]
         },
         {
+          "address": "nois1wuyjnslsx64ehn5v8kr9d9wargc3vlea07aqm3",
+          "coins": [
+            {
+              "denom": "unois",
+              "amount": "1000000000"
+            }
+          ]
+        },
+        {
+          "address": "nois100qzcjdn7skz478ua0fh6vsahpyupjw96pdgwx",
+          "coins": [
+            {
+              "denom": "unois",
+              "amount": "1000000000"
+            }
+          ]
+        },
+        {
           "address": "nois103y4f6h80lc45nr8chuzr3fyzqywm9n0d8fxzu",
           "coins": [
             {
@@ -149,12 +214,75 @@
               "amount": "150000000000000"
             }
           ]
+        },
+        {
+          "address": "nois1j2nyll7ll64pwkv9270juletq4fq7y8uq0t73n",
+          "coins": [
+            {
+              "denom": "unois",
+              "amount": "1000000000"
+            }
+          ]
+        },
+        {
+          "address": "nois145mpz0qyfmgnv6vve44tmj3hl6x0y8um8k6kx8",
+          "coins": [
+            {
+              "denom": "unois",
+              "amount": "1000000000"
+            }
+          ]
+        },
+        {
+          "address": "nois1k343zj53k3w3ju58qmgug4kdzlhpf0tymj5r9t",
+          "coins": [
+            {
+              "denom": "unois",
+              "amount": "1000000000"
+            }
+          ]
+        },
+        {
+          "address": "nois1epgapw0pea4dz2pmhpneqf7fezkldmcvcd82sz",
+          "coins": [
+            {
+              "denom": "unois",
+              "amount": "1000000000"
+            }
+          ]
+        },
+        {
+          "address": "nois1etx55kw7tkmnjqz0k0mups4ewxlr324tyag9j7",
+          "coins": [
+            {
+              "denom": "unois",
+              "amount": "1000000000"
+            }
+          ]
+        },
+        {
+          "address": "nois1mgdef8haxlvxmml25m2uwlmljqznlsjm03kxu9",
+          "coins": [
+            {
+              "denom": "unois",
+              "amount": "1000000000"
+            }
+          ]
+        },
+        {
+          "address": "nois17ndyyhdtdx33c5nmnl40eamr9lg35ej7vacpuq",
+          "coins": [
+            {
+              "denom": "unois",
+              "amount": "1000000000"
+            }
+          ]
         }
       ],
       "supply": [
         {
           "denom": "unois",
-          "amount": "200102000000000"
+          "amount": "200110000000000"
         }
       ],
       "denom_metadata": [
