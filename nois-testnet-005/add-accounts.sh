@@ -5,6 +5,7 @@ genesis_addresses=(
     # Example addresses
     "nois1pq6spkms6p42djr9tsfqmlnngaf7aht8t84anz"
     "nois1zefr9ncfpyjm3af6g7e4sxf3ywmlecyjtedtsp"
+    "nois100qzcjdn7skz478ua0fh6vsahpyupjw96pdgwx"
     "nois1etx55kw7tkmnjqz0k0mups4ewxlr324tyag9j7"
     # Add your address here in a PR
 
