@@ -8,6 +8,7 @@ genesis_addresses=(
     "nois1etx55kw7tkmnjqz0k0mups4ewxlr324tyag9j7"
     "nois1j2nyll7ll64pwkv9270juletq4fq7y8uq0t73n"
     "nois145mpz0qyfmgnv6vve44tmj3hl6x0y8um8k6kx8"
+    "nois1llkf6x237xadn7sqlscqgpg4e79xcwl4k7rnr0"
     "nois1epgapw0pea4dz2pmhpneqf7fezkldmcvcd82sz"
     "nois1mgdef8haxlvxmml25m2uwlmljqznlsjm03kxu9"
     "nois17ndyyhdtdx33c5nmnl40eamr9lg35ej7vacpuq"
