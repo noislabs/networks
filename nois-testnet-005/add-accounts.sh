@@ -5,7 +5,7 @@ genesis_addresses=(
     # Example addresses
     "nois1pq6spkms6p42djr9tsfqmlnngaf7aht8t84anz"
     "nois1zefr9ncfpyjm3af6g7e4sxf3ywmlecyjtedtsp"
-    # Add your address here in a PR
+    "nois19t6kxd4mmkawxtmejxjt3x597xtdevufxug0ma"  # narkosha adress for testnet-005
 
 )
 
