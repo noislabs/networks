@@ -6,7 +6,7 @@ genesis_addresses=(
     "nois19t6kxd4mmkawxtmejxjt3x597xtdevufxug0ma"  # narkosha adress for testnet-005
     "nois100qzcjdn7skz478ua0fh6vsahpyupjw96pdgwx"
     "nois1etx55kw7tkmnjqz0k0mups4ewxlr324tyag9j7"
-    "nois1j2nyll7ll64pwkv9270juletq4fq7y8uq0t73n"
+    "nois16agwms2fd6tgkgmd2axnnr4vvp3g42dl2hn58r"
     # Add your address here in a PR
 
 )
