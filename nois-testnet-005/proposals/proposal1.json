@@ -1,0 +1,21 @@
+{
+    "title": "Nois Inflation Change and allocation fund alloc",
+    "description": "Change inflation.",
+    "changes":
+        [
+             { "subspace": "mint",
+              "key": "InflationMax",
+              "value": "0.21"
+             },
+             { "subspace": "mint",
+              "key": "InflationMin",
+              "value": "0.21"
+             },
+             { "subspace": "allocation",
+              "key": "RandomnessRewardsReceiver",
+              "value": "nois12czz6envaqjytsf6y69uyry62z7huev8ac5txd"
+             }
+        ],
+    "deposit": "200000000unois"
+}
+

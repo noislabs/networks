@@ -1,0 +1,23 @@
+{
+    "title": "Nois Inflation Change and allocation fund alloc",
+    "description": "Add dev fund addr",
+    "changes":
+        [
+             {
+                "subspace": "allocation",
+                "key": "DeveloperRewardsReceiver",
+                "value": [
+                    {
+                        "address": "nois1nxvzlhkttspf2e4qy3prc54umkzvfseulmre7j",
+                        "weight": "0.5"
+                    },
+                    {
+                        "address": "nois1nl78mv0a2ufhc8alfr3nq2tpnqsw4c8hgtwcaq",
+                        "weight": "0.5"
+                    }
+                ]
+            }
+        ],
+    "deposit": "200000000unois"
+}
+
